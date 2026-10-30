@@ -1,7 +1,7 @@
 (()=>{
 const $=(q,r=document)=>r.querySelector(q),$$=(q,r=document)=>[...r.querySelectorAll(q)];
-const stateKey='nykaaman-replica-profile-v2';
-let profile={name:'Demo User',email:'demo@example.com',phone:'0000000000',dob:'',gender:'',addresses:[]};
+const stateKey='nykaaman-replica-profile-v1';
+let profile={name:'Vidit Jain',email:'viditj2212@gmail.com',phone:'9004743098',dob:'',gender:'',addresses:[]};
 try{profile={...profile,...JSON.parse(localStorage.getItem(stateKey)||'{}')}}catch{}
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function toast(t){const n=$('#toast');n.textContent=t;n.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>n.classList.remove('show'),2600)}
